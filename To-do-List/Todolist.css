@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fff;
+    padding-top: 10px;
+}
+
+#todolist{
+    width: 100%;
+    max-width: 570px;
+    padding: 10px;
+    background-color:#fff;
+    margin: 80px auto 80px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 5px black;
+}
+#todolist h2{
+    color: #ad2390;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.row{
+    background-color: rgba(82, 85, 89, 0.277);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 25px;
+    margin-bottom: 20px;
+}
+#todolist input{
+    padding: 8px;
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    border-radius: 50px;
+    background: transparent;
+}
+#todolist button{
+    width: 120px;
+    padding: 9px;
+    border: none;
+    background-color: orangered;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 20px;
+}
+#list-container {
+    margin-top: 20px;
+    font-size: 20px;
+}
+ul li {
+    list-style: none;
+    margin-left: 50px;
+    padding: 12px 8px 12px 50px;
+    position: relative;
+    user-select: none;
+    cursor: pointer;
+}
+
+ul li::before{
+    content: '';
+    background: url(./images/unchecked.png);
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 12px;
+    left: 8px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50px;
+}
+ul li.tasks{
+    color: red;
+    text-decoration: line-through;
+}
+ul li.tasks::before{
+    content: '';
+    background: url(./images/checked.png);
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 12px;
+    left: 8px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50px;
+}
+span {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    left: 420px;
+    width: 20px;
+    height: 20px;
+    font-size: 30px;
+}
+@media screen and (max-width:500px) {
+    span{
+        position: absolute;
+        top: 10px;
+        right: 0px;
+        left: 75%;
+        width: 20px;
+        height: 20px;
+        font-size: 30px;
+    }
+    ul li {
+        list-style: none;
+        margin-left: 10px;
+        padding: 12px 8px 12px 50px;
+        position: relative;
+        user-select: none;
+        cursor: pointer;
+    }
+}
+span:hover{
+    color: red;
+    border-radius: 50px;
+}
